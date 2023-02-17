@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Obejct</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            "nama lengkap" : "Thomas Ardiansah",
+            alamat : "Indonesia",
+            umur : 100,
+        };
+
+        // ubah property / attribute
+        // person["nama"] = "Thomas Ardiansah";
+        // perosn["alamat"] = "Jakarta";
+        // person["umur"] = 200;
+
+        console.info(`Nama : ${person["nama lengkap"]}`);
+        console.info(`Alamat : ${person.alamat}`);
+        console.info(`Umur : ${person.umur}`);
+
+        console.table(person);
+
+        delete person["umur"];
+
+
+
+
+
+
+    </script>
+</body>
+</html>
