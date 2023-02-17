@@ -11,9 +11,13 @@
 
         const examValue = 90;
 
-        if(examValue > 80)
+        if(examValue >= 100)
         {
             document.writeln("<p>Good Job</p>");
+        }else if(examValue <= 90){
+            document.writeln("<p>Not Bad</p>");
+        }else {
+            document.writeln("<p>Try Again Next Year</p>");
         }
 
     </script>
