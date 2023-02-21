@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        console.info(`Total ${name} is ${total}`);
+      }
+
+      sum("Orange", 2, 3, 4, 5, 10, 11);
+      sum("Apple", 2, 3, 12, 6, 10, 11);
+      sum("Orange", 2, 20, 4, 55, 1000, 11);
+
+      const value = [10, 10, 10, 10, 10];
+      sum("Test", ...value);
+    </script>
+  </body>
+</html>
