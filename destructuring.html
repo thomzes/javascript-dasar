@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Destructuring</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // const names = ["Thomas", "Ardiansah", "Khan", "Matumbaman", "Datas", "Kawan"];
 
-        // const names = ["Thomas", "Ardiansah", "Khan", "Matumbaman", "Datas", "Kawan"];
+      // const [firstName, middleName, lastName, ...others] = names;
 
-        // const [firstName, middleName, lastName, ...others] = names;
+      // console.info(firstName);
+      // console.info(lastName);
+      // console.info(middleName);
+      // console.info(others);
 
-        // console.info(firstName);
-        // console.info(lastName);
-        // console.info(middleName);
-        // console.info(others);
+      // const person = {
+      //     firstName: "Thomas",
+      //     lastName: "Ardiansah",
+      //     address: {
+      //         street: "Jalan Buntu",
+      //         city: "Jakarta",
+      //         country: "Indonesia"
+      //     },
+      //     hobby: "Game",
+      //     channel: "Belum ada",
+      // }
 
-        // const person = {
-        //     firstName: "Thomas",
-        //     lastName: "Ardiansah",
-        //     address: {
-        //         street: "Jalan Buntu",
-        //         city: "Jakarta",
-        //         country: "Indonesia"
-        //     },
-        //     hobby: "Game",
-        //     channel: "Belum ada",
-        // }
+      // const {firstName, lastName, address: {street, city, country}, ...others} = person;
 
-        // const {firstName, lastName, address: {street, city, country}, ...others} = person;
+      // console.info(firstName);
+      // console.info(lastName);
+      // console.info(city);
+      // console.info(country);
+      // console.info(others);
 
-        // console.info(firstName);
-        // console.info(lastName);
-        // console.info(city);
-        // console.info(country);
-        // console.info(others);
+      // desctruction di function parameter
+      //   function displayPerson({ firstName, middleName, lastName }) {
+      //     console.info(firstName);
+      //     console.info(middleName);
+      //     console.info(lastName);
+      //   }
 
+      //   const person = {
+      //     firstName: "Thomas",
+      //     middleName: "Ardiansah",
+      //     lastName: "Khannn",
+      //   };
 
-        // desctruction di function parameter
-        function displayPerson({firstName, middleName, lastName}) {
-            console.info(firstName);
-            console.info(middleName);
-            console.info(lastName);
-        }
+      //   displayPerson(person);
 
-        const person = {
-            firstName: "Thomas",
-            middleName: "Ardiansah",
-            lastName: "Khannn",
-        }        
+      // destructuring array
+      function sum([first, second]) {
+        return first + second;
+      }
 
-        displayPerson(person);
+      console.info(sum([1, 1]));
+      console.info(sum([1, 5]));
 
-        // destructuring array
-        function sum(array) {
-            return array[0] + array[1];
-        }
+      //   default value destructuring array
+      const names = ["Thomas", "Ardiansah"];
+      const [firstName, middleName, lastName = "Khan"] = names;
 
-        console.info(sum([1,1]));
-        console.info(sum([1,5]));
-
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
     </script>
-</body>
+  </body>
 </html>
